@@ -1,268 +1,51 @@
-<!DOCTYPE HTML>
-<!--
-  Editorial by HTML5 UP
-  html5up.net | @ajlkn
-  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html>
-  <head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Yuval Rishu Sanders</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-  </head>
-  <body class="is-preload">
+</head>
 
-    <!-- Wrapper -->
-      <div id="wrapper">
+<body>
+  <h1>Yuval Rishu Sanders</h1>
+  <p>Senior Lecturer, <a href="https://www.uts.edu.au/research/centre-quantum-software-and-information">Centre for Quantum Software and Information, University of Technology Sydney</a></p>
+  <ul>
+    <li>Contact: <a href="mailto:yuval.sanders@uts.edu.au">yuval.sanders@uts.edu.au</a></li>
+    <li>arXiv: <a href="https://arxiv.org/a/sanders_y_1.html">sanders_y_1</a></li>
+    <li>ORCID: <a href="https://orcid.org/0000-0001-8003-0039">0000-0001-8003-0039</a></li>
+  </ul>
 
-        <!-- Main -->
-          <div id="main">
-            <div class="inner">
+  <h2>Research Statement</h2>
+  <p>A quantum computer, if built, is believed to be able to outperform any non-quantum (“classical”) computer. The outperformance derives not from an evolution in computer technology enabling more efficient logical operations but from a foundational shift in the very concept of a computer enabled by quantum technologies.</p>
+  <p>Classical computers are, by definition, equivalent in a technical sense to a model proposed by Alan Turing involving a simple machine and an infinite “tape” onto which the symbols 0 and 1 may be written, read, copied, and erased. Quantum computers, by contrast, allow for the possibility that the tape could store quantum superpositions of the symbols 0 and 1. Theoretical complexity analysis of such a machine indicate that the machine could carry out certain computational tasks in a more scalable manner than any classical computer.</p>
+  <p>The most prominent example of quantum outperformance is given by Shor’s algorithm, which finds a non-trivial factor (if it exists) of an input integer with high probability in polynomial time. By contrast, theoretical computer scientists believe that a classical computer requires more than polynomial time to accomplish the same feat. In fact, the information technology sector is so comfortable with this assertion that a great many cybersecurity protocols assume that an attacker cannot efficiently factorise a large integer. Thus Shor’s algorithm proves quantum computers capable of breaking widely deployed cryptosystems.</p>
+  <p>The above is my rendition of the standard argument supporting the need for quantum computing research and development. But there is a serious weakness to the story: it may be the case that powerful enough quantum computers will <i>eventually</i> defeat classical computers, but it remains to be seen whether it is technologically feasible to build such large quantum computers. This question of technological feasibility can be expressed in terms of how powerful a quantum computer will be needed to outperform present-day or near-future classical computers for a useful task. To be blunt, this question has not been answered.</p>
+  <p>Attempts have been made to answer the question. For example, researchers from Google <a href="https://www.doi.org/10/gmbpbg">[doi:10/gmbpbg]</a> analysed how much time would be needed for a surface-code-architecture quantum computer with access to 20 million noisy qubits to break 2048-bit RSA (the quintessential cryptography algorithm that relies on the assumed classical difficulty of factorising integers). Their answer: around 8 hours, based on an estimation of the “approximate cost” using “plausible physical assumptions”. I myself have “estimated the approximate cost” <a href="https://www.doi.org/10/fhht">[doi:10/fhht]</a> of quantum algorithms with Google researchers and believe that these estimates are highly unreliable.</p>
+  <p>My ambition is to enable reliable analysis of quantum computations in order to ascertain if, when, and how a quantum computer will beat classical computers at some useful task. Whereas this kind of forecasting is unavoidably based on presumptions about the performance of future technology, those presumptions can be summarised in terms of a computational cost model. One potential quantum computer application could be rigorously analysed in terms of its performance on a hypothetical machine and then the computational cost model would be used to assess how well a real quantum computer would simulate the hypothetical machine. In other words, the analysis of the <i>application</i> is distinct from the analysis of the <i>technology</i>. The application analysis need not be nearly so crude as it is today.</p>
 
-              <!-- Header -->
-                <header id="header">
-                  <a class="logo">Yuval Rishu <strong>Sanders</strong></a>
-                  <ul class="icons">
-                    <li><a href="https://twitter.com/RishuYuval" class="icon
-                    brands fa-twitter"><span
-                    class="label">Twitter</span></a></li>
-                    <li><a href="https://www.facebook.com/yuval.sanders"
-                    class="icon brands fa-facebook-f"><span
-                    class="label">Facebook</span></a></li>
-                    <li><a href="https://www.linkedin.com/in/yrs87/"
-                    class="icon brands fa-linkedin"><span
-                    class="label">LinkedIn</span></a></li>
-                    <li><a
-                    href="https://scholar.google.com/citations?user=gf9mitoAAAAJ&hl=en"
-                    class="icon brands fa-google"><span class="label">Google
-                    Scholar</span></a></li>  
-                    <li><a href="https://orcid.org/0000-0001-8003-0039"
-                    class="icon brands fa-orcid"><span
-                    class="label">ORCID</span></a></li>
-                    <li><a href="https://github.com/ysanders" class="icon
-                    brands fa-github"><span class="label">GitHub</span></a></li>
-                    <li><a href="mailto:yuval.rishu.sanders@gmail.com"
-                    class="icon solid fa-envelope"> <span
-                    class="label">email</span></a></li>
-                  </ul>
-                </header>
+  <h3>Vision</h3>
+  <p>I aim to enable accurate computational cost analysis of potential quantum computer applications by developing the software support needed to automate that analysis. Currently, this task is carried out ‘by hand’ by expert teams of researchers over many months. I propose to develop software tools that can accomplish the same task in minutes and with greater accuracy.</p>
+  <p>This set of software tools could roughly be called a “compiler” because it would translate code written in a high level quantum programming language (that I have tentatively called QuO) into quantum circuits suitable for optimisation and execution on quantum hardware. Because the compiler will return quantum circuits, which play a similar role to machine instructions in classical hardware, it will be possible to produce complementary software that analyses the output of the compiler for expected cost under a variety of hardware scenarios, including potential future scenarios.</p>
+  <p>By enabling such automatic analysis of high-level quantum code, my research will enable a vastly more efficient design process for quantum computer applications. Currently, the sticking point in this design process is the time cost of evaluating possible applications for performance relative to classical counterparts. This could enable a 100,000-fold (≈ 2.5 months / 1 minute) speedup in the design iteration process and pave the way for significantly more sophisticated and reliable cross-comparisons between quantum and classical solutions. This would additionally prove fertile ground for the development of “quantum inspired” algorithms.</p>
+  
+  <h2>Curriculum Vitae</h2>
 
-              <!-- Banner -->
-                <section id="banner">
-                  <div class="content">
-                    <header>
-                      <h1>Hi, I’m Yuval</h1>
-                      <p>(and this page is still under construction)</p>
-                    </header>
-                    <p>
-                    I am a Canadian-Australian quantum physicist
-                    specialising in <strong>quantum computer science</strong>.
-                    I work on application-focussed quantum algorithms,
-                    analysis and mitigation of noise in quantum hardware,
-                    and various topics in fundamental quantum information
-                    science.
-                    </p>
-                    <p>
-                    I was born Canadian but grew up mostly in Sydney,
-                    Australia. I currently live and work in Sydney,
-                    though I completed my post-secondary education in Canada.
-                    </p>
-                    <p>
-                    I am currently employed by the University of Technology,
-                    Sydney. I prefer to be contacted by <a
-                    href="mailto:yuval.rishu.sanders@gmail.com">email</a>
-                    and do not use social media very much.
-                    </p>
-                  </div>
-                  <span class="image object">
-                    <img src="images/profile.jpg" alt="" />
-                  </span>
-                </section>
-
-              <!-- Section 
-                <section>
-                  <header class="major">
-                    <h2>Erat lacinia</h2>
-                  </header>
-                  <div class="features">
-                    <article>
-                      <span class="icon fa-gem"></span>
-                      <div class="content">
-                        <h3>Portitor ullamcorper</h3>
-                        <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-                      </div>
-                    </article>
-                    <article>
-                      <span class="icon solid fa-paper-plane"></span>
-                      <div class="content">
-                        <h3>Sapien veroeros</h3>
-                        <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-                      </div>
-                    </article>
-                    <article>
-                      <span class="icon solid fa-rocket"></span>
-                      <div class="content">
-                        <h3>Quam lorem ipsum</h3>
-                        <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-                      </div>
-                    </article>
-                    <article>
-                      <span class="icon solid fa-signal"></span>
-                      <div class="content">
-                        <h3>Sed magna finibus</h3>
-                        <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-                      </div>
-                    </article>
-                  </div>
-                </section> -->
-
-              <!-- Section -->
-                <section>
-                  <header class="major">
-                    <h2>Present Affiliations</h2>
-                  </header>
-                  <div class="posts">
-                    <article>
-                      <a href="https://www.uts.edu.au/research-and-teaching/our-research/centre-quantum-software-and-information" class="image"><img src="images/UTS.svg" alt="" /></a>
-                      <h3>Centre for Quantum Software and Information,
-                      University of Technology Sydney (UTS)</h3>
-                      <p>I will be working at UTS from 1 July 2021
-                      in collaboration with
-                      <a
-                      href="https://profiles.uts.edu.au/Zhengfeng.Ji/about">Zhengfeng
-                      Ji</a>,
-                      <a href="https://profiles.uts.edu.au/troy.lee">Troy
-                      Lee</a>, and
-                      <a href="https://profiles.uts.edu.au/youming.qiao">Youming Qiao</a>
-                      on quantum algorithms research.</p>
-                    </article>
-                    <article>
-                      <a href="https://www.mq.edu.au/faculty-of-science-and-engineering/departments-and-schools/department-of-physics-and-astronomy" class="image"><img src="images/MQ.png" alt="" /></a>
-                      <h3>Department of Physics and Astronomy, Macquarie
-                      University</h3>
-                      <p>I was employed by Macquarie University from 15 August
-                      2016 to 18 June 2021, and will maintain an honorary
-                      affiliation going forward. I worked primarily with
-                      <a
-                      href="https://researchers.mq.edu.au/en/persons/dominic-berry">Dominic
-                      Berry</a> and <a
-                      href="https://researchers.mq.edu.au/en/persons/gavin-brennen">Gavin
-                      Brennen</a> on quantum algorithms research.</p>
-                    </article>
-                    <article>
-                      <a href="https://www.sydney.edu.au/engineering/schools/school-of-computer-science.html" class="image"><img src="images/USyd.png" alt="" /></a>
-                      <h3>School of Computer Science, University of Sydney</h3>
-                      <p>I have been affiliated with the University of Sydney
-                      since 1 October 2020 in order to foster my collaboration
-                      with <a href="https://www.sydney.edu.au/engineering/about/our-people/academic-staff/shuaiwen-song.html">Shuaiwen Leon Song</a> on developing a hardware-agnostic
-                      quantum computer architecture for computational cost
-                      analysis of quantum algorithms.</p>
-                    </article>
-                    <article>
-                      <a href="https://equs.org" class="image"><img
-                      src="images/EQUS.png" alt="" /></a>
-                      <h3>Australian Research Council Centre for Excellence in Engineered Quantum
-                      Systems (EQUS)</h3>
-                      <p>I have been an Associate Investigator with EQUS since
-                      8 August 2019. I am chair of the Mentoring and Career
-                      Development Committee and lead the organisation of a
-                      sequence of Python workshops aimed at introducing quantum
-                      scientists to good coding habits.</p>
-                    </article>
-                  </div>
-                </section>
-
-            </div>
-          </div>
-
-        <!-- Sidebar -->
-          <div id="sidebar">
-            <div class="inner">
-
-              <!-- Search 
-                <section id="search" class="alt">
-                  <form method="post" action="#">
-                    <input type="text" name="query" id="query" placeholder="Search" />
-                  </form>
-                </section> -->
-
-              <!-- Menu 
-                <nav id="menu">
-                  <header class="major">
-                    <h2>Menu</h2>
-                  </header>
-                  <ul>
-                    <li><a href="index.html">Homepage</a></li>
-                    <li><a href="generic.html">Generic</a></li>
-                    <li><a href="elements.html">Elements</a></li>
-                    <li>
-                      <span class="opener">Submenu</span>
-                      <ul>
-                        <li><a href="#">Lorem Dolor</a></li>
-                        <li><a href="#">Ipsum Adipiscing</a></li>
-                        <li><a href="#">Tempus Magna</a></li>
-                        <li><a href="#">Feugiat Veroeros</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Etiam Dolore</a></li>
-                    <li><a href="#">Adipiscing</a></li>
-                    <li>
-                      <span class="opener">Another Submenu</span>
-                      <ul>
-                        <li><a href="#">Lorem Dolor</a></li>
-                        <li><a href="#">Ipsum Adipiscing</a></li>
-                        <li><a href="#">Tempus Magna</a></li>
-                        <li><a href="#">Feugiat Veroeros</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Maximus Erat</a></li>
-                    <li><a href="#">Sapien Mauris</a></li>
-                    <li><a href="#">Amet Lacinia</a></li>
-                  </ul>
-                </nav>-->
-
-              <!-- Section 
-                <section>
-                  <header class="major">
-                    <h2>Ante interdum</h2>
-                  </header>
-                  <div class="mini-posts">
-                    <article>
-                      <a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-                      <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-                    </article>
-                    <article>
-                      <a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-                      <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-                    </article>
-                    <article>
-                      <a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-                      <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-                    </article>
-                  </div>
-                  <ul class="actions">
-                    <li><a href="#" class="button">More</a></li>
-                  </ul>
-                </section>-->
-
-              <!-- Footer -->
-                <footer id="footer">
-                  <p class="copyright">
-                  Website Design: <a href="https://html5up.net/editorial">HTML5 UP</a>.</p>
-                </footer>
-
-            </div>
-          </div>
-
-      </div>
-
-    <!-- Scripts 
-      <script src="assets/js/jquery.min.js"></script>
-      <script src="assets/js/browser.min.js"></script>
-      <script src="assets/js/breakpoints.min.js"></script>
-      <script src="assets/js/util.js"></script>
-      <script src="assets/js/main.js"></script>-->
-
-  </body>
+  <h3>Employment</h3>
+  <table cellpadding="6">
+    <tr> <th>Employer</th> <th>Position</th> <th>Start</th> <th>End</th> </tr> 
+    <tr> <td>University of Technology Sydney</td> <td>Permanent Faculty</td> <td>2022-09</td> <td><i>present</i></td> </tr>
+    <tr> <td>University of Technology Sydney</td> <td>Research Associate</td> <td>2021-07</td> <td>2022-09</td> </tr>
+    <tr> <td>Macquarie University</td> <td>Research Associate</td> <td>2016-08</td> <td>2021-06</td> </tr>
+  </table>        
+  
+  <h3>Education</h3>
+  <table cellpadding="6">
+    <tr> <th>Institution</th> <th>Degree</th> <th>Conferral</th> </tr> 
+    <tr> <td>University of Waterloo</td> <td>Doctor of Philosophy</td> <td>2016-11</td> </tr>
+    <tr> <td>University of Calgary</td> <td>Master of Science</td> <td>2011-06</td> </tr>
+    <tr> <td>University of Calgary</td> <td>Bachelor of Science</td> <td>2008-06</td> </tr>
+  </table>        
+    
+    
+</body>
 </html>
